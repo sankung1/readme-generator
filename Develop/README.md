@@ -1,6 +1,6 @@
 
-[![forthebadge](https: //forthebadge.com/images/badges/license-MIT.svg)](https://forthebadge.com)
-  # README Generator
+  ![License](https://img.shields.io/badge/License-MIT-blue.svg "License Badge")
+  # README GENERATOR
   ## Table of Contents
   * [Description](#description) 
   * [Installation](#installation) 
@@ -11,13 +11,13 @@
   *[My Profile](#link)
   
   ## Description
-  it generates a read me file
+  This app creates a README file
 
   ## Installation 
-  clone the repo and run the file in your IDE
+  clone the repo and run it in your IDE
 
   ## Usage
-  node js is required to run this app
+  You need node js to run this app
 
   ## License
   MIT
@@ -29,5 +29,5 @@
   My Github user name is sankung1
 
   ## My Profile
-  dkajsabjfiab
+  https://github.com/sankung1
 
