@@ -1,80 +1,82 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
-const Choice = require("inquirer/lib/objects/choice");
-const Choices = require("inquirer/lib/objects/choices");
-const utils = require("./utils");
+const generateMarkDown = require("./utils/generateMarkdown");
+const util = require("util");
 
-const writeFileAsync = utils.promisify(fs.writeFile);
+const writeFileAsync = util.promisify(fs.writeFile);
 
 // array of questions for user
 const questions = [
     {
         type: "input",
-        name: "Title",
+        name: "title",
         message: "What is the title of your README?"
     },
     {
         type: "input",
-        name: "Description",
+        name: "description",
         message: "What is the description of your README file?"     
-    }
-    {
-        type: "input",
-        name: "Table of Contents",
-        message: "Enter your info for your table of contents"
     },
     {
         type: "input",
-        name: "Installation",
+        name: "installation",
         message: "How is this app installed?"
     },
     {
         type: "input",
-        name: "Usage",
+        name: "usage",
         message: "How is this app used?"
     },
     {
         type: "checkbox",
-        name: "License",
+        name: "license",
         message: "How do you want your app to be licensed?",
-        Choices: [
-            "MIT License",
-            "Apache License",
-            "GPL License",
-            "The Unilicense",
+        choices: [
+            "MIT",
+            "Apache",
+            "GPL",
             "Unlicensed"
         ]
         
     },
     {
         type: "input",
-        name: "Contributing",
-        message: "How are the contributors to this app?"
+        name: "contributors",
+        message: "Who are the contributors to this app?"
     },
     {
         type: "input",
-        name: "Tests",
+        name: "tests",
         message: "Test your app"
     },
     {
         type: "input",
-        name: "Questions",
+        name: "questions",
         message: "What is your Github username?"
     },
     {
         type: "input",
-        name: "Link",
+        name: "link",
         message: "Link your Github profile here"
     }
 ];
 
 // function to write README file
 function writeToFile(fileName, data) {
+    writeFileAsync(fileName, data, error =>{
+        if(error){
+            throw error;
+            console.log("There's an unexpected error")
+        }
+    })
 }
 
 // function to initialize program
 function init() {
-
+   inquirer.prompt(questions).then(answers =>{
+        const response = generateMarkDown(answers);
+        writeToFile("./README.md", response);
+    })
 }
 
 // function call to initialize program
