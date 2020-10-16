@@ -1,5 +1,5 @@
 
-  ![License](https://img.shields.io/badge/License-MIT-blue.svg "License Badge")
+  ![License](https://img.shields.io/badge/License-GPL-blue.svg "License Badge")
   # README GENERATOR
   ## Table of Contents
   * [Description](#description) 
@@ -11,19 +11,19 @@
   *[My Profile](#link)
   
   ## Description
-  This app creates a README file
+  This app will create a new READEME file for the user
 
   ## Installation 
-  clone the repo and run it in your IDE
+  clone the repo and open it with your favorite IDE
 
   ## Usage
-  You need node js to run this app
+  You need Node js to use this app
 
   ## License
-  MIT
+  GPL
 
   ## Contributors
-  Myself
+  Myself 
 
   ## Questions
   My Github user name is sankung1

@@ -1,1 +1,5 @@
 # readme-generator
+This is a README Generator. It prompts the user with a series of questions that will help the user create a quality readme file. All this work is done through the node js console. The user will need to have node js installed to run the app. The user should clone the repo from github and then open it with vs code or their prefered IDE. The user must perform npm i in the node js console to install all the required npm packages. The app will prompt the user series of quetions regarding the app. This was achieved using the npm inquirer package which allows the app to ask the user some questions. Whne the user is done the app will create a readme file entailing all the information the user provided
+
+here is a walkthrough on how the app works
+https://drive.google.com/file/d/1RvgQsQRCWkehiS4KnQbLOHGloDpGn_NV/view
